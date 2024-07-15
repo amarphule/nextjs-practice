@@ -4,12 +4,11 @@ import React from 'react'
 
 const ProductDetails = () => {
   const {details} = useParams()
-  // console.log(details);
+  // details = 1
   
   // http://localhost:3000/products/1?search=amar
   const search = useSearchParams()
-
-  console.log(search.get('search'));
+  search.get('search'); // amar
   
 
   return (
