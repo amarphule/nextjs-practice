@@ -9,9 +9,7 @@ type Params = {
   type UserProps = {
     params: Params;
   };
-const User: NextPage<UserProps> = ({params}) => {
-    console.log(params);
-    
+const User: NextPage<UserProps> = ({params}) => {    
     const {id} = params
     
   return (
