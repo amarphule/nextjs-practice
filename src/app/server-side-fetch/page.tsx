@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type User = {
   id: number;
   firstName: string;
@@ -31,7 +33,11 @@ const ServerSideDataFetch = async () => {
         {listOfUsers && listOfUsers.length > 0
           ? listOfUsers.map((user) => {
               return (
-                <li key={user.id}>{`${user.firstName} ${user.lastName}`}</li>
+                <li key={user.id} className="hover:underline hover:m-2 m-2">
+                  <Link
+                    href={`server-side-fetch/${user.id}`}
+                  >{`${user.firstName}`}</Link>
+                </li>
               );
             })
           : null}
